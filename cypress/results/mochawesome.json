@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-07-25T06:31:52.384Z",
+    "end": "2023-07-25T06:33:27.499Z",
+    "duration": 95115,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0ab23ad4-ccbc-49b3-89e1-458e18305e9e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\UITest1.cy.js",
+      "file": "cypress\\e2e\\UITest1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "132c6d36-0fa2-4297-b911-39b2165f9bf0",
+          "title": "User visit diffrent pages on cypress.io",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "UI Test 1.1 - User visit \"Home Page\" and visit the \"How it works\"",
+              "fullTitle": "User visit diffrent pages on cypress.io UI Test 1.1 - User visit \"Home Page\" and visit the \"How it works\"",
+              "timedOut": null,
+              "duration": 13983,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "l.homepage();\nl.AcceptCookies().click();\ncy.title().should('eq', 'JavaScript End to End Testing Framework | cypress.io testing tools'); //Verify Page Title with exact & full text\ncy.title().should('include', 'JavaScript'); //Verify Page Title with partial text\nl.howitworkspagelink().click();\ncy.title().should('eq', 'JavaScript End to End Testing Framework | cypress.io testing tools'); //Verify Page Title with exact & full text\ncy.title().should('include', 'End to End'); //Verify Page Title with partial text",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `button[id=\"onetrust-accept-btn-handler\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `button[id=\"onetrust-accept-btn-handler\"]`, but never found it.\n    at homePageLinks.AcceptCookies (webpack:///./cypress/pageObjects/homePageLinks.js:13:16)\n    at Context.eval (webpack:///./cypress/e2e/UITest1.cy.js:8:10)",
+                "diff": null
+              },
+              "uuid": "ac320437-71a7-43fa-8ae1-0a84b3a874af",
+              "parentUUID": "132c6d36-0fa2-4297-b911-39b2165f9bf0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "UI Test 1.2 - User visit \"Pricing\" page and check for the price of cypress.io and click on Team and Business",
+              "fullTitle": "User visit diffrent pages on cypress.io UI Test 1.2 - User visit \"Pricing\" page and check for the price of cypress.io and click on Team and Business",
+              "timedOut": null,
+              "duration": 14379,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "l.homepage();\nl.pricingpagelink().click();\nl.AcceptCookies().click();\ncy.title().should('eq', 'Pricing For Cypress Testing Framework | cypress.io testing tools'); //Verify Page Title with exact & full text\ncy.title().should('include', 'Pricing'); //Verify Page Title with partial text\nconst p = new _pricingPageLinks.default();\np.teamtab().click();\np.businesstab().click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.styled__NavList-sc-16oj5lj-3:nth-child(1) > .styled__NavItem-sc-16oj5lj-4:nth-child(4) > .Link-sc-5cc5in-0`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.styled__NavList-sc-16oj5lj-3:nth-child(1) > .styled__NavItem-sc-16oj5lj-4:nth-child(4) > .Link-sc-5cc5in-0`, but never found it.\n    at homePageLinks.pricingpagelink (webpack:///./cypress/pageObjects/homePageLinks.js:10:16)\n    at Context.eval (webpack:///./cypress/e2e/UITest1.cy.js:18:10)",
+                "diff": null
+              },
+              "uuid": "d191e84b-647a-4e92-a7e2-051f1d8d52c2",
+              "parentUUID": "132c6d36-0fa2-4297-b911-39b2165f9bf0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ac320437-71a7-43fa-8ae1-0a84b3a874af",
+            "d191e84b-647a-4e92-a7e2-051f1d8d52c2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 28362,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
